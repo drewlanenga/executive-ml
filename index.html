@@ -24,31 +24,52 @@
 			text-align:center;
 			font-size:70px;
 			}
+		#Cover .cover-img {
+			width: 100%;
+		}
+		#Cover .cover-logo-container {
+			margin-top: 144px;
+			text-align: center;
+		}
+		#Cover .cover-logo {
+			position: static;
+		}
 		#FitToWidth h2,
 		#FitToHeight h2 {
 			color:#FFF;
 			text-align:center;
 			}
+		.takeaway {
+
+		}
+		.takeaway h2 {
+			line-height: 1.4em;
+			margin-top: 48px;
+		}
 	</style> 
 </head>
 <body class="list">
   <header class="caption">
   	<h1>Executive Machine Learning</h1>
+  	<h2>Or How I Learned to Stop Worrying and Love the Buzzwords</h2>
 	</header>
   <section class="slide cover" id="Cover">
   <div>
     <h2>Executive Machine Learning</h2>
-    
+    <p><img class="cover-img" alt="background" src="https://cloud.githubusercontent.com/assets/3698679/3165966/5563cf64-eb5b-11e3-9136-638fb04d4c1a.jpg" /></p>
+
+<div class="cover-logo-container">
+    <img class="cover-logo" alt="logo" src="http://taction.io/images/p_lytics.png" />
+</div>
+
   </div>
 </section>
 <section class="slide " id="slide-2">
   <div>
-    <h2>Executive Machine Learning</h2>
-    <ol>
-<li> What machine learning is</li>
-<li> What &quot;predictive analytics&quot; are</li>
-<li> Executive glossary to lookup key buzzwords</li>
-</ol>
+    <h2>TL;DR</h2>
+    <p>Machine Learning gets a lot of hype for being very sophisticated.  Most machine learning techniques boil down to two tasks: <strong>prediction</strong> and <strong>recommendation</strong>.</p>
+
+<p>Here, we&#39;ll walk through each and provide a supplemental glossary for reference.</p>
 
   </div>
 </section>
@@ -61,9 +82,12 @@
 <section class="slide " id="slide-4">
   <div>
     <h2>Machine Learning</h2>
-    <p><strong>muh·ʃeen  lear·niŋ</strong>: Any process that uses data to get better/more accurate.</p>
+    <p><strong>[muh·ʃeen  lear·niŋ]</strong>: Any process that uses data to to build models that get better/more accurate with more data.</p>
 
-<p>Machine learning is what allows <em>predictive analytics</em> to be <em>predictive</em>.</p>
+<blockquote>
+<p>All models are approximations.  Essentially, all models are wrong, but some are useful.
+ &mdash; <strong>George E. P. Box</strong></p>
+</blockquote>
 
   </div>
 </section>
@@ -76,7 +100,7 @@
 
 <ul>
 <li><strong>Training</strong>: Build the best model you can with part of the data</li>
-<li><strong>Validation</strong>: See if the training model performs on the rest of the data
+<li><strong>Validation</strong>: See how the training model performs on the rest of the data
 
 <ul>
 <li>If it <em>performs well</em>: you&#39;re done</li>
@@ -85,42 +109,35 @@
 </ul></li>
 </ol>
 
-<p>You <strong>can&#39;t use any machine learning model until it has been trained</strong>, and your model is <strong>no good until it has been validated</strong>.</p>
-
   </div>
 </section>
-<section class="slide shout" id="slide-6">
+<section class="slide takeaway" id="slide-6">
   <div>
-    <h2>Predictive Analytics</h2>
+    <h2>You can&#39;t use any machine learning model until it has been trained, and your model is no good until it has been validated.</h2>
     
   </div>
 </section>
-<section class="slide " id="slide-7">
+<section class="slide shout" id="slide-7">
   <div>
-    <h2>Predictive Analytics</h2>
-    <p>Predictive analytics make <em>predictions</em> typically in the following categories:</p>
-
-<ul>
-<li>Predict a value</li>
-<li>Predict clusters</li>
-<li>Make a recommendation</li>
-</ul>
-
+    <h2>Prediction</h2>
+    
   </div>
 </section>
 <section class="slide " id="slide-8">
   <div>
-    <h2>Predicting Values</h2>
-    <ul>
+    <h2>Predictive Analytics</h2>
+    <p>Predictive analytics use <em>correlated data</em> to make <em>predictions</em> typically in the following categories:</p>
+
+<ul>
 <li>Predict a <strong>Number</strong> - typically called <strong>regression</strong>
 
 <ul>
-<li></li>
+<li><em>ex.</em> Predicting a user&#39;s future purchase quantity</li>
 </ul></li>
 <li>Predict a <strong>Label</strong> - typically called <strong>classification</strong>
 
 <ul>
-<li></li>
+<li><em>ex.</em> Predicting the contents of an image (house, dog, etc.)</li>
 </ul></li>
 </ul>
 
@@ -128,94 +145,160 @@
 </section>
 <section class="slide shout" id="slide-9">
   <div>
-    <h2>Appendix</h2>
+    <h2>Recommendation</h2>
     
   </div>
 </section>
 <section class="slide " id="slide-10">
   <div>
-    <h2>Glossary: General</h2>
-    <ul>
-<li><strong>Machine Learning</strong>: Processes that get smarter (more accurate/predictive) with more data</li>
-<li><strong>Correlation</strong>: Information about one thing implicitly gives you information about another</li>
-<li><strong>Overfitting</strong>: Building models that don&#39;t generalize.  Typically, data is beaten into submission and more anomilies are modeled than actual relationships.</li>
+    <h2>Object similarity</h2>
+    <p>More generally, recommendation is more a problem of determining <em>object similarity</em>.</p>
+
+<ul>
+<li>Similar users are often grouped together for <em>clustering</em> or <em>cohort analysis</em> to discover hidden segments in the data.</li>
+<li>Similar users can also help drive recommendation engines by the assumption that similar users consume essentially the same content.</li>
 </ul>
 
   </div>
 </section>
 <section class="slide " id="slide-11">
   <div>
-    <h2>Glossary: Data</h2>
-    <ul>
-<li><strong>Cardinality</strong>: Number of unique levels of a variable</li>
-<li><strong>Ontology</strong>: Domain-specificy knowledge hierarchy.
+    <h2>Implementation</h2>
+    <p><strong>High level</strong>: Use distance metrics and/or <em>matrix factorization</em> to identify <em>latent variables</em> that explain why the data are they way they are.</p>
 
-<ul>
-<li>i.e. flip-flop <code>-&gt;</code> sandal <code>-&gt;</code> footwear; jacket <code>-&gt;</code> outerwear</li>
-</ul></li>
-<li><strong>Structured Data</strong>: Data that you can put into a spreadsheet</li>
-<li><strong>Unstructured Data</strong>: Typically a bunch of text; any information inside one point could be very different from any other point</li>
-</ul>
+<p>Matrix factorization yields similar users and similar items.</p>
+
+<p>Recommendations can then be user level (<em>who you should follow on Twitter</em>) or item level (<em>users who bought X also bought Y</em>).</p>
 
   </div>
 </section>
 <section class="slide " id="slide-12">
   <div>
-    <h2>Glossary: Regression</h2>
-    <ul>
-<li><strong>Regression</strong>: Using related data to predict a number</li>
-<li><strong>Regression Tree</strong>: A form of regression built by segmenting the data to create a set of decision rules, called a tree, about a dataset.  A number is output.</li>
-<li><strong>Logistic Regression</strong>: Specific type of regression used to predict the probability that an event will occur</li>
-</ul>
+    <h2>Interpretation Examples</h2>
+    <table><thead>
+<tr>
+<th>Industry</th>
+<th>Latent Variable</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Music</td>
+<td>Genre, epoch</td>
+</tr>
+<tr>
+<td>Apparel</td>
+<td>Category (fashion forward, dad pants, grunge, etc.)</td>
+</tr>
+</tbody></table>
+
+<p>Often, latent variables aren&#39;t always semantically meaningful and don&#39;t have a strict interpretation</p>
 
   </div>
 </section>
-<section class="slide " id="slide-13">
+<section class="slide shout" id="slide-13">
   <div>
-    <h2>Glossary: Classification</h2>
-    <ul>
-<li><strong>Classification Tree</strong>: Similar to a regression tree, but the output is a category/label/tag.</li>
-<li><strong>Support Vector Machine</strong>: Another model for classification tasks</li>
-<li><strong>Naive Bayes Classifier</strong>: Uses Bayes&#39; Theorem to make classifications.  Performs well when you have a LOT of possible fields</li>
-</ul>
-
+    <h2>Appendix</h2>
+    
   </div>
 </section>
 <section class="slide " id="slide-14">
   <div>
-    <h2>Glossary: Clustering</h2>
+    <h2>Glossary: General</h2>
     <ul>
-<li><strong>k-means</strong>: Create a pre-determined number of clusters (<em>k</em>) from data</li>
+<li><strong>Correlation</strong>: Information about one thing implicitly gives you information about another</li>
+<li><strong>Overfitting</strong>: Building models that don&#39;t generalize.  Typically, data is beaten into submission and more anomilies are modeled than actual relationships.</li>
+<li><strong>Latent variable</strong>: Hidden (non-observable) variables that explain relationships in what is actually observed.</li>
 </ul>
 
   </div>
 </section>
 <section class="slide " id="slide-15">
   <div>
-    <h2>Glossary: Anomaly Detection</h2>
+    <h2>Glossary: Data</h2>
     <ul>
-<li><strong>Anomaly Detection</strong>: Use</li>
-<li><strong>Outlier</strong>: A record that is, by one or more data points, very different from other records.</li>
+<li><strong>Cardinality</strong>: Number of unique levels of a variable.</li>
+<li><strong>Ontology</strong>: Domain-specificy knowledge hierarchy.
+
+<ul>
+<li>i.e. flip-flop <code>-&gt;</code> sandal <code>-&gt;</code> footwear; jacket <code>-&gt;</code> outerwear</li>
+</ul></li>
+<li><strong>Structured Data</strong>: Data that you can put into a spreadsheet.</li>
+<li><strong>Unstructured Data</strong>: Typically a bunch of text; any information inside one point could be very different from any other point.</li>
 </ul>
 
   </div>
 </section>
 <section class="slide " id="slide-16">
   <div>
+    <h2>Glossary: Regression</h2>
+    <ul>
+<li><strong>Regression</strong>: Using related data to predict a number.  Typically computationally expensive.</li>
+<li><strong>Regression Tree</strong>: A form of regression built by segmenting the data to create a set of decision rules, called a tree, about a dataset.</li>
+<li><strong>Logistic Regression</strong>: Specific type of regression used to predict the probability that an event will occur.</li>
+<li><strong>Gradient Descent</strong>: A method to estimate regression output.  Less computationally expensive.</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-17">
+  <div>
+    <h2>Glossary: Classification</h2>
+    <ul>
+<li><strong>Classification Tree</strong>: Similar to a regression tree, but the output is a category/label/tag.</li>
+<li><strong>Support Vector Machine</strong>: Another model for classification tasks.</li>
+<li><strong>Naive Bayes Classifier</strong>: Uses Bayes&#39; Theorem to make classifications.  Performs well when you have a LOT of possible fields.</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-18">
+  <div>
+    <h2>Glossary: Clustering</h2>
+    <ul>
+<li><strong>k-means</strong>: Technique for creating a pre-determined number of clusters (<em>k</em>) from data.</li>
+<li><strong>Hierarchical clustering</strong>: Create a tree of pairwise similar items.  Continue to pair similar <em>groups</em> of items until there is one big group.</li>
+<li><strong>Cohort Analysis</strong>: Analyzing users by the cohort to which they belong, which are typically found by a clustering algorithm. This can lead to identifying user personas, best segments (ROI, retention), etc.</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-19">
+  <div>
+    <h2>Glossary: Recommendation</h2>
+    <ul>
+<li><strong>Collaboritive Filtering</strong>: Technique that assumes that similar people like similar things.  (And that similar things are liked by similar people.)</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-20">
+  <div>
+    <h2>Glossary: Anomaly Detection</h2>
+    <ul>
+<li><strong>Anomaly Detection</strong>: Use regression, classification and clustering to detect outliers.</li>
+<li><strong>Outlier</strong>: A record that is, by one or more data points, very different from other records.</li>
+<li><strong>Fraud Detection</strong>: Fraud detection is a special case of anomaly detection.</li>
+</ul>
+
+  </div>
+</section>
+<section class="slide " id="slide-21">
+  <div>
     <h2>Glossary: Advanced</h2>
     <ul>
 <li><strong>Bootstrap</strong>: Taking smaller samples of a larger dataset multiple times, and running the analysis on the smaller sets.  When the output is aggregated across samples, this is sometimes used as a sort of pesudo-divide and conquer approach to analyze larger data sets.</li>
 <li><strong>Bagging</strong>: Bootstrap aggregating, averaging the results of a bootstrap.</li>
 <li><strong>Random Forest</strong>: Essentially a bagging with regression/classification trees.</li>
-<li><strong>Neural Network</strong>: Sophisticated approach to modeling non-linear relationships.  Very accurate, but a complete black box -- you can&#39;t tell how it built the model, but it works.</li>
 </ul>
 
-<p>&quot;iOS 8 is the biggest iOS release ever&quot;
-&quot;so you can do more than ever&quot;
-&quot;The all-new Photos app makes it simpler than ever...&quot;
-&quot;Our smartest keyboard ever&quot;
-&quot;It&#39;s also easier than ever to share family photos&quot;
-&quot;Spotlight.  Brighter than ever.&quot;</p>
+  </div>
+</section>
+<section class="slide " id="slide-22">
+  <div>
+    <h2>Glossary: Advanced</h2>
+    <ul>
+<li><strong>Neural Network</strong>: Sophisticated approach to modeling non-linear relationships.  Very accurate, but a complete black box -- you can&#39;t tell how it built the model, but it works.</li>
+</ul>
 
   </div>
 </section>

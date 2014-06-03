@@ -14,16 +14,34 @@
 			text-align:center;
 			font-size:70px;
 			}
+		#Cover .cover-img {
+			width: 100%;
+		}
+		#Cover .cover-logo-container {
+			margin-top: 144px;
+			text-align: center;
+		}
+		#Cover .cover-logo {
+			position: static;
+		}
 		#FitToWidth h2,
 		#FitToHeight h2 {
 			color:#FFF;
 			text-align:center;
 			}
+		.takeaway {
+
+		}
+		.takeaway h2 {
+			line-height: 1.4em;
+			margin-top: 48px;
+		}
 	</style> 
 </head>
 <body class="list">
   <header class="caption">
   	<h1>{{{ page.title }}}</h1>
+  	<h2>{{{ page.subtitle }}}</h2>
 	</header>
   {{{ page.content }}}
   <div class="progress">
